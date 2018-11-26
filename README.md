@@ -30,11 +30,11 @@ function BootstrapBreakpoints(props) {
   return (
     <MatchMedia
       queries={{
-        xs: "(max-width: 575px)",
+        xs: "(max-width: 575.98px)",
         sm: "(min-width: 576px) and (max-width: 767.98px)",
         md: "(min-width: 768px) and (max-width: 991.98px)",
         lg: "(min-width: 992px) and (max-width: 1199.98px)",
-        xl: "(min-width: 1200)",
+        xl: "(min-width: 1200px)",
       }}
     >
       {({ xs, sm, md, lg, xl }) => (
@@ -69,11 +69,11 @@ const ExampleHOC = withBootstrapBreakpoints(function Example({ matches }) {
 const withBootstrapBreakpoints = Component => props => (
   <MatchMedia
     queries={{
-      xs: "(max-width: 575px)",
+      xs: "(max-width: 575.98px)",
       sm: "(min-width: 576px) and (max-width: 767.98px)",
       md: "(min-width: 768px) and (max-width: 991.98px)",
       lg: "(min-width: 992px) and (max-width: 1199.98px)",
-      xl: "(min-width: 1200)",
+      xl: "(min-width: 1200px)",
     }}
   >
     {matches => <Component matches={matches} {...props} />}
