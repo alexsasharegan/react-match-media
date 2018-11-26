@@ -3,6 +3,8 @@
 A render prop component that provides idiomatic react component access to the
 match media API.
 
+[Type Documentation](https://naughty-kalam-69f73a.netlify.com/)
+
 ## Install
 
 ### NPM
