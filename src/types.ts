@@ -5,10 +5,16 @@ export interface BasicMediaQueryList {
 
 export type MediaQuery = string;
 export type MediaQueryAlias = string;
-export type MediaQueryBag = { [alias: string]: MediaQuery };
+export interface MediaQueryBag {
+  [alias: string]: MediaQuery;
+}
 export type MediaQueryEntry = [MediaQueryAlias, MediaQuery];
 export type MediaQueryListener = (mql: BasicMediaQueryList) => void;
-export type MediaQueryMatches = { [alias: string]: boolean };
+export interface MediaQueryMatches {
+  [alias: string]: boolean;
+}
 export type MediaQueryUnsubscribeFn = () => void;
 
-export type Dictionary<T> = { [key: string]: T };
+export interface Dictionary<T> {
+  [key: string]: T;
+}

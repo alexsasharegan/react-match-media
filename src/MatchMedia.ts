@@ -10,21 +10,21 @@ import {
   MediaQueryUnsubscribeFn,
 } from "./types";
 
-type QueryDiff = {
+interface QueryDiff {
   subscribe: MediaQueryEntry[];
   unsubscribe: string[];
-};
+}
 
-type Props = {
+export interface MatchMediaProps {
   queries: MediaQueryBag;
   children: (props: MediaQueryMatches) => React.ReactNode;
-};
+}
 
-type State = {
+interface State {
   queries: Dictionary<boolean>;
-};
+}
 
-export class MatchMedia extends React.Component<Props, State> {
+export class MatchMedia extends React.Component<MatchMediaProps, State> {
   unsubscribeMap: Map<MediaQueryAlias, MediaQueryUnsubscribeFn> = new Map();
 
   state: State = {
@@ -74,7 +74,7 @@ export class MatchMedia extends React.Component<Props, State> {
     this.unsubscribe([...this.unsubscribeMap.keys()]);
   }
 
-  componentDidUpdate(prevProps: Props) {
+  componentDidUpdate(prevProps: MatchMediaProps) {
     let diff = diffQueries(prevProps.queries, this.props.queries);
     if (!diff) {
       return;

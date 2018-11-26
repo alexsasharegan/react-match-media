@@ -5,10 +5,14 @@
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "esm/index.d.ts",
+  "files": [
+    "cjs",
+    "esm"
+  ],
   "scripts": {
     "prebuild": "rm -Rf lib cjs esm",
     "build:docs": "typedoc --options typedoc.js",
-    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:esm": "tsc -p tsconfig.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build": "npm run build:cjs && npm run build:esm",
     "prepublishOnly": "npm run build",
@@ -32,8 +36,8 @@
   "devDependencies": {
     "@types/react": "^16.7.7",
     "prettier": "^1.15.2",
-    "rollup": "^0.67.3",
     "standard-version": "^4.4.0",
+    "typedoc": "^0.13.0",
     "typescript": "^3.1.6"
   },
   "dependencies": {}
