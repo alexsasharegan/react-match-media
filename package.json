@@ -1,0 +1,40 @@
+{
+  "name": "@alexsasharegan/react-match-media",
+  "version": "1.0.0",
+  "description": "A render prop component that provides idiomatic react component access to the match media API.",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "esm/index.d.ts",
+  "scripts": {
+    "prebuild": "rm -Rf lib cjs esm",
+    "build:docs": "typedoc --options typedoc.js",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run build:cjs && npm run build:esm",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master && npm publish",
+    "test": "exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsasharegan/react-match-media.git"
+  },
+  "author": "Alex Regan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexsasharegan/react-match-media/issues"
+  },
+  "homepage": "https://github.com/alexsasharegan/react-match-media#readme",
+  "peerDependencies": {
+    "react": "^16.6.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.7.7",
+    "prettier": "^1.15.2",
+    "rollup": "^0.67.3",
+    "standard-version": "^4.4.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {}
+}

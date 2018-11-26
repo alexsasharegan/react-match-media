@@ -1,0 +1,8 @@
+node_modules/
+.*
+!.gitignore
+!.prettierrc
+/tmp/
+/cjs/
+/lib/
+/esm/
