@@ -1,5 +1,10 @@
 # react-match-media
 
+[![npm](https://img.shields.io/npm/v/@alexsasharegan/react-match-media.svg?style=for-the-badge)](https://img.shields.io/npm/v/@alexsasharegan/react-match-media)
+[![npm downloads](https://img.shields.io/npm/dt/@alexsasharegan/react-match-media.svg?style=for-the-badge)](https://www.npmjs.com/package/@alexsasharegan/react-match-media)
+[![GitHub issues](https://img.shields.io/github/issues/alexsasharegan/react-match-media.svg?style=for-the-badge)](https://github.com/alexsasharegan/react-match-media/issues)
+[![GitHub license](https://img.shields.io/github/license/alexsasharegan/react-match-media.svg?style=for-the-badge)](https://github.com/alexsasharegan/react-match-media/blob/master/LICENSE)
+
 A render prop component that provides idiomatic react component access to the
 match media API.
 
