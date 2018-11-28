@@ -1,6 +1,6 @@
 {
   "name": "@alexsasharegan/react-match-media",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A render prop component that provides idiomatic react component access to the match media API.",
   "main": "cjs/index.js",
   "module": "esm/index.js",
